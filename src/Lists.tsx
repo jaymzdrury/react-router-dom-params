@@ -1,6 +1,6 @@
 import {useNavigate} from 'react-router-dom'
 function Lists() {
   const navigate = useNavigate()
-  return (<>{[1,2,3,4].map(list => <div onClick={() => navigate(`/${list}`)} key={list}>{list}</div>)}</>)
+  return (<>{Array.apply(null, Array(5)).map((_,i) => <div onClick={() => navigate(`/${i}`)} key={i}>{i}</div>)}</>)
 }
 export default Lists
